@@ -1,5 +1,5 @@
 import { Universe, Cell }from "wasm-game-of-life";
-import { memory } from "wasm_game_of_life/wasm_game_of_life_bg";
+import { memory } from "wasm-game-of-life/wasm_game_of_life_bg";
 
 const universe = Universe.new();
 const width = universe.width();
