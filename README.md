@@ -1,5 +1,9 @@
 <div align="center">
 
+## About
+
+This project is based closely on the tutorial found [here](https://rustwasm.github.io/docs/book/introduction.html)
+
 ## 🚴 Usage
 
 ### 🛠️ Build with `wasm-pack build`
