@@ -5,7 +5,7 @@ const universe = Universe.new();
 const width = universe.width();
 const height = universe.height();
 
-const CELL_SIZE = 8; // px
+const CELL_SIZE = 5; // px
 const GRID_COLOUR = "#CCCCCC";
 const DEAD_COLOUR = "#FFFFFF";
 const ALIVE_COLOUR = "#000000";
