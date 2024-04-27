@@ -7,7 +7,7 @@ const height = universe.height();
 
 const CELL_SIZE = 5; // px
 const GRID_COLOUR = "#EEEEEE";
-const DEAD_COLOUR = "#FFFFFF";
+const DEAD_COLOUR = "#EEEEEE";
 const ALIVE_COLOUR = "#000000";
 
 const canvas = document.getElementById("game-of-life-canvas");
