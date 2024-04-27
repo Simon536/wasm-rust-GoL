@@ -21,6 +21,10 @@
         font-size: 28px;
         margin: 15px;
       }
+      #control-panel {
+        display: flex;
+        flex-direction: column;
+      }
       #fps {
         white-space:pre;
         font-family: monospace;
@@ -43,7 +47,7 @@
     </style>
   </head>
   <body>
-    <div>
+    <div id="control-panel">
       <button id="play-pause"></button>
       <button id="reset-game"></button>
     </div>
