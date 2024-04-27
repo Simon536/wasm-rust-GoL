@@ -17,6 +17,7 @@ canvas.width = (CELL_SIZE + 1) * width + 1;
 const ctx = canvas.getContext('2d');
 const playPauseButton = document.getElementById("play-pause");
 const resetGameButton = document.getElementById("reset-game");
+resetGameButton.textContent = " ↺ ";
 
 let animationId = null;
 
@@ -166,6 +167,7 @@ playPauseButton.addEventListener("click", event => {
 });
 
 resetGameButton.addEventListener("click", event => {
+  console.info("Resetting the game...");
   universe.reset();
 });
 
