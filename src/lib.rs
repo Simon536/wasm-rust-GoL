@@ -1,7 +1,7 @@
 mod utils;
 
-use wasm_bindgen::prelude::*;
 use std::fmt;
+use wasm_bindgen::prelude::*;
 
 extern crate js_sys;
 
@@ -31,7 +31,7 @@ impl Universe {
         (row * self.width + column) as usize
     }
 
-    fn live_neighbour_count(&self, row:u32, column: u32) -> u8 {
+    fn live_neighbour_count(&self, row: u32, column: u32) -> u8 {
         let mut count = 0;
         for delta_row in [self.height - 1, 0, 1].iter().cloned() {
             for delta_col in [self.width - 1, 0, 1].iter().cloned() {
@@ -86,12 +86,24 @@ impl Universe {
         self.cells = next;
     }
 
+    pub fn reset(&mut self) {
+        self.cells = (0..self.width * self.height)
+            .map(|_i| {
+                if js_sys::Math::random() < 0.5 {
+                    Cell::Alive
+                } else {
+                    Cell::Dead
+                }
+            })
+            .collect();
+    }
+
     pub fn new() -> Universe {
         let width = 128;
         let height = 128;
 
         let cells = (0..width * height)
-            .map(|i| {
+            .map(|_i| {
                 if js_sys::Math::random() < 0.5 {
                     Cell::Alive
                 } else {

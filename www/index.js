@@ -16,6 +16,7 @@ canvas.width = (CELL_SIZE + 1) * width + 1;
 
 const ctx = canvas.getContext('2d');
 const playPauseButton = document.getElementById("play-pause");
+const resetGameButton = document.getElementById("reset-game");
 
 let animationId = null;
 
@@ -162,6 +163,10 @@ playPauseButton.addEventListener("click", event => {
   } else {
     pause();
   }
+});
+
+resetGameButton.addEventListener("click", event => {
+  universe.reset();
 });
 
 drawGrid();
